@@ -8,12 +8,13 @@
     <img src="assets/method.png" alt="SEIKO" style="width: 100%;">
     <figcaption> SEIKO</figcaption>
   </figure>
-  <figure style="margin: 0; text-align: center; width: 42%;">
+  <figure style="margin: 0; text-align: center; width: 41%;">
     <img src="assets/generations.png" alt="Another Image" style="width: 100%;">
     <figcaption> Images generated with aesthetic scores using the prompt ``cheetah". Our methods outperform the baselines in terms of higher aesthetic scores while using the same amount of feedback.</figcaption>
   </figure>
 </div>
 <div style="margin-top: 20px;">
+</div>
 
 [![arXiv](https://img.shields.io/badge/cs.LG-arXiv:2402.16359-b31b1b.svg)](https://arxiv.org/abs/2402.16359) [![arXiv](https://img.shields.io/badge/ICML-2024-b31b1b.svg)](https://openreview.net/forum?id=dtVlc9ybTm)
 </div>
