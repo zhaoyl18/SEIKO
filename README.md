@@ -85,8 +85,7 @@ Generated images with aesthetic scores using the prompt "cheetah" are shown as b
 
 ### Acknowledgement
 
-Our codebase is directly built on top of [AlignProp](https://github.com/mihirp1998/AlignProp/) and [DDPO](https://github.com/kvablack/ddpo-pytorch).  
-We are thankful to the authors for providing the codebases.
+Our codebase is directly built on top of [AlignProp](https://github.com/mihirp1998/AlignProp/) and [DDPO](https://github.com/kvablack/ddpo-pytorch).  We are thankful to the authors for providing the codebases.
 
 ## Citation
 
