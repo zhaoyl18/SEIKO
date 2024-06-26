@@ -68,7 +68,7 @@ accelerate launch online/online_main.py --config config/TS.py:aesthetic
 
 ### Evaluation
 
-The table below presents results for fine-tuning Stable Diffusion to optimize aesthetic scores. **SEIKO** (UCB and Bootstrap) attains high rewards within a fixed budget.
+The table below presents performances for fine-tuning Stable Diffusion to optimize aesthetic scores. **SEIKO** (UCB and Bootstrap) attains high rewards within a fixed budget.
 |            Algorithms                     | Value ↑           |
 |---------------------------------|-------------------|
 | **Non-adaptive**                | $7.22 \pm 0.18$   |
