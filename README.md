@@ -3,18 +3,7 @@
 <!-- TITLE -->
 # **Feedback Efficient Online Fine-Tuning of Diffusion Models**  
 
-<div style="display: flex; justify-content: space-between;">
-  <figure style="margin: 0; text-align: center; width: 55%;">
-    <img src="assets/method.png" alt="SEIKO" style="width: 100%;">
-    <figcaption> SEIKO</figcaption>
-  </figure>
-  <figure style="margin: 0; text-align: center; width: 41%;">
-    <img src="assets/generations.png" alt="Another Image" style="width: 100%;">
-    <figcaption> Images generated with aesthetic scores using the prompt ``cheetah". Our methods outperform the baselines in terms of higher aesthetic scores while using the same amount of feedback.</figcaption>
-  </figure>
-</div>
-<div style="margin-top: 20px;">
-</div>
+![SEIKO](assets/method.png)
 
 [![arXiv](https://img.shields.io/badge/cs.LG-arXiv:2402.16359-b31b1b.svg)](https://arxiv.org/abs/2402.16359) [![arXiv](https://img.shields.io/badge/ICML-2024-b31b1b.svg)](https://openreview.net/forum?id=dtVlc9ybTm)
 </div>
@@ -76,6 +65,23 @@ accelerate launch online/online_main.py --config config/Bootstrap.py:aesthetic
 ```bash
 accelerate launch online/online_main.py --config config/TS.py:aesthetic
 ```
+
+### Evaluation
+
+The table below presents results for fine-tuning Stable Diffusion to optimize aesthetic scores. **SEIKO** (UCB and Bootstrap) attains high rewards within a fixed budget.
+|            Algorithms                     | Value ↑           |
+|---------------------------------|-------------------|
+| **Non-adaptive**                | $7.22 \pm 0.18$   |
+| **Guidance**                    | $5.78 \pm 0.28$   |
+| **Online PPO**                  | $6.13 \pm 0.33$   |
+| **Greedy**                      | $6.24 \pm 0.28$   |
+| **UCB (Ours)**                  | **$8.17 \pm 0.33$** |
+| **Bootstrap (Ours)**            | $7.77 \pm 0.12$   |
+
+#### Generated Examples
+
+Generated images with aesthetic scores using the prompt "cheetah" are shown as below. Our methods outperform the baselines in terms of higher aesthetic scores while using the same amount of feedback.*
+![Another Image](assets/generations.png)
 
 ### Acknowledgement
 
