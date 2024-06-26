@@ -75,6 +75,8 @@ When evaluating a saved model checkpoint, the `resume_from` variable must be spe
 accelerate launch online/online_main.py --config config/Greedy.py:evaluate --config.resume_from path-to-ckpt
 ```
 
+#### Results
+
 The table below presents performances for fine-tuning Stable Diffusion to optimize aesthetic scores. **SEIKO** (UCB and Bootstrap) attains high rewards within a fixed budget.
 
 |            Algorithms                     | Value ↑           |
