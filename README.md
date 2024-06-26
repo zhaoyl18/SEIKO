@@ -12,7 +12,7 @@ This is the official implementation of paper [Feedback Efficient Online Fine-Tun
 
 ## Project Description
 
-This study presents a novel reinforcement learning method to efficiently fine-tune diffusion models, targeting high-reward regions on the feasible manifold. The approach is validated both theoretically and empirically across images, biological sequences, and molecules. The repository includes the codebase for fine-tuning a pre-trained Stable Diffusion model in the image domain.
+This study presents **SEIKO** (Optimi**S**tic fin**E**-tuning of d**I**ffusion with **K**L c**O**nstraint), a novel reinforcement learning method to efficiently fine-tune diffusion models, targeting high-reward regions on the feasible manifold. The approach is validated both theoretically and empirically across images, biological sequences, and molecules. This repository includes the codebase for fine-tuning a pre-trained Stable Diffusion model in the image domain.
 
 ## Abstract
 
