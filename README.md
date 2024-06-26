@@ -8,7 +8,7 @@
 [![arXiv](https://img.shields.io/badge/cs.LG-arXiv:2402.16359-b31b1b.svg)](https://arxiv.org/abs/2402.16359) [![arXiv](https://img.shields.io/badge/ICML-2024-b31b1b.svg)](https://openreview.net/forum?id=dtVlc9ybTm)
 </div>
 
-This is the official implementation of paper [Feedback Efficient Online Fine-Tuning of Diffusion Models](https://arxiv.org/abs/2402.16359) accepted by ICML 2024.
+This is the official implementation of the paper [Feedback Efficient Online Fine-Tuning of Diffusion Models](https://arxiv.org/abs/2402.16359) accepted by ICML 2024.
 
 ## Project Description
 
@@ -16,7 +16,7 @@ This study presents **SEIKO** (Optimi**S**tic fin**E**-tuning of d**I**ffusion w
 
 ## Abstract
 
-Diffusion models excel at modeling complex data distributions, including those of images, proteins, and small molecules. However, in many cases, our goal is to model parts of the distribution that maximize certain properties: for example, we may want to generate images with high aesthetic quality, or molecules with high bioactivity. It is natural to frame this as a reinforcement learning (RL) problem, in which the objective is to fine-tune a diffusion model to maximize a reward function that corresponds to some property. Even with access to online queries of the ground-truth reward function, efficiently discovering high-reward samples can be challenging: they might have a low probability in the initial distribution, and there might be many infeasible samples that do not even have a well-defined reward (e.g., unnatural images or physically impossible molecules). In this work, we propose a novel reinforcement learning procedure that efficiently explores on the manifold of feasible samples. We present a theoretical analysis providing a regret guarantee, as well as empirical validation across three domains: images, biological sequences, and molecules.
+Diffusion models excel at modeling complex data distributions, including those of images, proteins, and small molecules. However, in many cases, our goal is to model parts of the distribution that maximize certain properties. For example, we may want to generate images with high aesthetic quality, or molecules with high bioactivity. It is natural to frame this as a reinforcement learning (RL) problem, in which the objective is to fine-tune a diffusion model to maximize a reward function that corresponds to some property. Even with access to online queries of the ground-truth reward function, efficiently discovering high-reward samples can be challenging: they might have a low probability in the initial distribution, and there might be many infeasible samples that do not even have a well-defined reward (e.g., unnatural images or physically impossible molecules). In this work, we propose a novel reinforcement learning procedure that efficiently explores on the manifold of feasible samples. We present a theoretical analysis providing a regret guarantee, as well as empirical validation across three domains: images, biological sequences, and molecules.
 
 ## Code
 
@@ -29,12 +29,12 @@ conda create -n SEIKO python=3.10
 conda activate SEIKO
 pip install -r requirements.txt
 ```
-Please use accelerate==0.17.0, other library dependancies might be flexible.
+Please use accelerate==0.17.0; other library dependencies might be flexible.
 
 ### Training
 
 HuggingFace Accelerate will automatically handle parallel training.  
-We conduct our experiments on image tasks using 4 A100 GPUs. Please adjust [*config.train.batch_size_per_gpu_available*] variable in config files according to your GPU memory.  
+We conducted our experiments on image tasks using 4 A100 GPUs. Please adjust the [*config.train.batch_size_per_gpu_available*] variable in the config files according to your GPU memory.  
 
 #### Running Non-adaptive (Baseline)  
 
@@ -69,6 +69,7 @@ accelerate launch online/online_main.py --config config/TS.py:aesthetic
 ### Evaluation
 
 The table below presents performances for fine-tuning Stable Diffusion to optimize aesthetic scores. **SEIKO** (UCB and Bootstrap) attains high rewards within a fixed budget.
+
 |            Algorithms                     | Value ↑           |
 |---------------------------------|-------------------|
 | **Non-adaptive**                | $7.22 \pm 0.18$   |
@@ -80,7 +81,7 @@ The table below presents performances for fine-tuning Stable Diffusion to optimi
 
 #### Generated Examples
 
-Generated images with aesthetic scores using the prompt "cheetah" are shown as below. Our methods outperform the baselines in terms of higher aesthetic scores while using the same amount of feedback.*
+Generated images with aesthetic scores using the prompt "cheetah" are shown below. Our methods outperform the baselines with higher aesthetic scores while using the same amount of feedback.
 ![Another Image](assets/generations.png)
 
 ### Acknowledgement
