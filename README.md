@@ -68,6 +68,13 @@ accelerate launch online/online_main.py --config config/TS.py:aesthetic
 
 ### Evaluation
 
+When evaluating a saved model checkpoint, the `resume_from` variable must be specified. Below is an example for evaluating **Greedy**. Evaluations for other methods are similar.
+
+#### Greedy evaluation.
+```bash
+accelerate launch online/online_main.py --config config/Greedy.py:evaluate --config.resume_from path-to-ckpt
+```
+
 The table below presents performances for fine-tuning Stable Diffusion to optimize aesthetic scores. **SEIKO** (UCB and Bootstrap) attains high rewards within a fixed budget.
 
 |            Algorithms                     | Value ↑           |
@@ -79,7 +86,7 @@ The table below presents performances for fine-tuning Stable Diffusion to optimi
 | **UCB (Ours)**                  | **$8.17 \pm 0.33$** |
 | **Bootstrap (Ours)**            | $7.77 \pm 0.12$   |
 
-#### Generated Examples
+#### Qualitative Examples
 
 Generated images with aesthetic scores using the prompt "cheetah" are shown below. Our methods outperform the baselines with higher aesthetic scores while using the same amount of feedback.
 ![Another Image](assets/generations.png)
