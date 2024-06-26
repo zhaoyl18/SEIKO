@@ -3,12 +3,22 @@
 <!-- TITLE -->
 # **Feedback Efficient Online Fine-Tuning of Diffusion Models**  
 
-![SEIKO](assets/method.png)
+<div style="display: flex; justify-content: space-between;">
+  <figure style="margin: 0; text-align: center; width: 55%;">
+    <img src="assets/method.png" alt="SEIKO" style="width: 100%;">
+    <figcaption> SEIKO</figcaption>
+  </figure>
+  <figure style="margin: 0; text-align: center; width: 42%;">
+    <img src="assets/generations.png" alt="Another Image" style="width: 100%;">
+    <figcaption> Images generated with aesthetic scores using the prompt ``cheetah". Our methods outperform the baselines in terms of higher aesthetic scores while using the same amount of feedback.</figcaption>
+  </figure>
+</div>
+<div style="margin-top: 20px;">
 
-[![arXiv](https://img.shields.io/badge/cs.LG-arXiv:2402.16359-b31b1b.svg)](https://arxiv.org/abs/2402.16359)
+[![arXiv](https://img.shields.io/badge/cs.LG-arXiv:2402.16359-b31b1b.svg)](https://arxiv.org/abs/2402.16359) [![arXiv](https://img.shields.io/badge/ICML-2024-b31b1b.svg)](https://openreview.net/forum?id=dtVlc9ybTm)
 </div>
 
-This is the official implementation of paper [Feedback Efficient Online Fine-Tuning of Diffusion Models](https://arxiv.org/abs/2402.16359) accepted by [ICML 2024](https://openreview.net/forum?id=dtVlc9ybTm).
+This is the official implementation of paper [Feedback Efficient Online Fine-Tuning of Diffusion Models](https://arxiv.org/abs/2402.16359) accepted by ICML 2024.
 
 ## Project Description
 
