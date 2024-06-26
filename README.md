@@ -34,7 +34,7 @@ Please use accelerate==0.17.0; other library dependencies might be flexible.
 ### Training
 
 HuggingFace Accelerate will automatically handle parallel training.  
-We conducted our experiments on image tasks using 4 A100 GPUs. Please adjust the [*config.train.batch_size_per_gpu_available*] variable in the config files according to your GPU memory.  
+We conducted our experiments on image tasks using 4 A100 GPUs. Please adjust the `config.train.batch_size_per_gpu_available` variable in the config files according to your GPU memory.  
 
 #### Running Non-adaptive (Baseline)  
 
@@ -70,7 +70,7 @@ accelerate launch online/online_main.py --config config/TS.py:aesthetic
 
 When evaluating a saved model checkpoint, the `resume_from` variable must be specified. Below is an example for evaluating **Greedy**. Evaluations for other methods are similar.
 
-#### Greedy evaluation.
+#### Evaluating Greedy (Baseline)
 ```bash
 accelerate launch online/online_main.py --config config/Greedy.py:evaluate --config.resume_from path-to-ckpt
 ```
