@@ -169,5 +169,27 @@ def aesthetic():
             )
     return config
 
+def evaluate():
+    config = general()
+    config.reward_fn = "aesthetic"
+    config.prompt_fn = "eval_simple_animals"
+    config.only_eval = True
+    config.same_evaluation = True
+    config.max_vis_images = 10
+    
+    if 'CUDA_VISIBLE_DEVICES' not in os.environ:
+        os.environ['CUDA_VISIBLE_DEVICES'] = '9'
+
+    num_gpus = len(os.environ['CUDA_VISIBLE_DEVICES'].split(','))
+    config.train.num_gpus = num_gpus
+    
+    config = set_config_batch(
+                config,
+                total_samples_per_epoch=64,
+                total_batch_size=32, 
+                per_gpu_capacity=4
+            )
+    return config
+
 def get_config(name):
     return globals()[name]()
